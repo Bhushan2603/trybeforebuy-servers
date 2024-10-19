@@ -67,6 +67,3 @@ def get_queue_data():
     except Exception as e:
         logger.error(f"An error occurred: {e}")
         return jsonify({"error": str(e)}), 500
-
-if __name__ == '__main__':
-    app.run()
