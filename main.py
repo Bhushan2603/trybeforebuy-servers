@@ -62,7 +62,7 @@ def get_queue_data():
             return jsonify({"error": "Failed to poll IDM-VTON queue data", "details": response.text}), response.status_code
 
         # Return the response from IDM-VTON queue data
-        return jsonify(response.text), response.status_code
+        return response.text, response.status_code
 
     except Exception as e:
         logger.error(f"An error occurred: {e}")
